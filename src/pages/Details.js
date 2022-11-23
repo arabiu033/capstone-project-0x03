@@ -4,10 +4,8 @@ import { useSelector } from 'react-redux';
 const Details = () => {
   const { laureates, loading } = useSelector((state) => ({ ...state.laureates }));
   if (loading === 'Loading Api') return (<></>);
-
-  const laureat = laureates.laureates;
   return (
-    laureat.map((lau) => (
+    laureates.laureates((lau) => (
       <article key={lau.id}>
         <div>LogoImage</div>
         <div>
