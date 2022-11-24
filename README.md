@@ -80,6 +80,9 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 For Design Inspiration I would like to Acknowledge
 
+- Hat tip to Nelson Sakwa on Behance for his amazing design.
+- Microverse
+
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
