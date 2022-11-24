@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly Form component 1`] = `
+<div
+  className="header-container"
+>
+  <span>
+    <a
+      aria-current="page"
+      className="header-home dhead active"
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+  </span>
+  <span
+    className="header-title dhead"
+  />
+  <ul>
+    <img
+      alt="mic"
+      className="header-icons"
+      src="mic.png"
+    />
+    <img
+      alt="setting"
+      className="header-icons"
+      src="setting.png"
+    />
+  </ul>
+</div>
+`;
