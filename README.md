@@ -78,10 +78,9 @@ Contributions, issues, and feature requests are welcome!
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-For Design Inspiration I would like to Acknowledge
-
-- Hat tip to Nelson Sakwa on Behance for his amazing design.
-- Microverse
+- [Nobel Prize](https://www.nobelprize.org/about/developer-zone-2/) Api used.
+- [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) Design idea.
+- [Microverse](https://www.microverse.org/) for the challange.
 
 ## 📝 License
 
