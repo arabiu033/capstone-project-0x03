@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+/* eslint-disable react/prop-types */
 import React from 'react';
 import lit from '../assets/images/lit.png';
 import Pea from '../assets/images/Pea.png';
@@ -18,9 +18,9 @@ export const images = {
 
 const Card = (props) => {
   const { laureates } = props;
-  const img = laureates.meta.nobelPrizeCategory;
+  const img = laureates && laureates.meta.nobelPrizeCategory;
   return (
-    laureates.laureates.map((lau) => (
+    laureates && laureates.laureates.map((lau) => (
       <article key={lau.id} className="card">
         <div className="category-icon">
           <img src={images[img] || images.Pea} alt={img} />
@@ -42,10 +42,6 @@ const Card = (props) => {
       </article>
     ))
   );
-};
-
-Card.propTypes = {
-  laureates: PropTypes.arrayOf(PropTypes.elementType).isRequired,
 };
 
 export default Card;

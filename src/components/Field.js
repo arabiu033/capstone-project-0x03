@@ -15,7 +15,9 @@ const Field = (props) => {
   const handleClick = (id, count) => {
     setTitle(() => 'Laureates');
     dispatch(fieldLaureates([id, count]));
-    dispatch(fetchLaureates({ id, count: count > 100 ? 50 : count }));
+    dispatch(fetchLaureates({
+      id, count: count > 100 ? 50 : count, from: 1901, to: 2022,
+    }));
   };
 
   return (
