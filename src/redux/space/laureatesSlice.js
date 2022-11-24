@@ -9,7 +9,7 @@ export const fetchLaureates = createAsyncThunk('capstone/fetchLaureates', async 
 const laureatesSlice = createSlice({
   name: 'nobelLaureates',
   initialState: {
-    loading: 'init',
+    loading: 'Loading Api',
     laureates: [],
   },
   reducers: {},
@@ -22,5 +22,4 @@ const laureatesSlice = createSlice({
   },
 });
 
-// export const {  } = laureatesSlice.actions;
 export default laureatesSlice.reducer;

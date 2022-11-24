@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchLaureates } from '../redux/space/laureatesSlice';
 import { fieldLaureates } from '../redux/space/nobelSlice';
+import { images } from './Card';
+import arrow from '../assets/images/arrow.png';
 
 const Field = (props) => {
   const { field, setTitle } = props;
@@ -18,11 +20,13 @@ const Field = (props) => {
 
   return (
     <Link to="/details" onClick={() => handleClick(field.id, field.count)}>
-      <article type="button">
-        <img alt="Icon" />
-        <img alt="Field" />
-        <h3>{field.name}</h3>
-        <h3>{field.count}</h3>
+      <article type="button" className="field">
+        <img src={arrow} alt="Field" className="field-arrow" />
+        <img src={images[field.id]} alt="Icon" className="field-image" />
+        <div className="field-detail">
+          <h3 className="field-name">{field.name}</h3>
+          <h3 className="field-count">{field.count}</h3>
+        </div>
       </article>
     </Link>
   );

@@ -37,7 +37,7 @@ const Card = (props) => {
         </p>
         <section className="more-info">
           <p className="motivation">{lau.nobelPrizes[0].motivation.en}</p>
-          <a href={lau.wikipedia.english} rel="noreferrer" target="_blank" className="wiki"><h5>{'Wikipedia _>'}</h5></a>
+          <a href={lau.wikipedia.english} rel="noreferrer" target="_blank" className="wiki"><h5>More (wiki)</h5></a>
         </section>
       </article>
     ))
