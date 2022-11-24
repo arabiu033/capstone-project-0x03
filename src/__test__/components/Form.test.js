@@ -12,7 +12,7 @@ test('renders correctly Form component', () => {
       <Provider store={store}>
         <Form />
       </Provider>
-    </BrowserRouter>
+    </BrowserRouter>,
   ).toJSON();
   expect(form).toMatchSnapshot();
 });

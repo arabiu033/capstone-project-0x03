@@ -12,7 +12,7 @@ test('renders correctly Header component', () => {
       <Provider store={store}>
         <Details />
       </Provider>
-    </BrowserRouter>
+    </BrowserRouter>,
   ).toJSON();
   expect(det).toMatchSnapshot();
 });

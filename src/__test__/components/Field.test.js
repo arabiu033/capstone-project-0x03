@@ -10,9 +10,9 @@ test('renders correctly Header component', () => {
   const fie = renderer.create(
     <BrowserRouter>
       <Provider store={store}>
-        <Field field={{id: 'title', name:'', count: 0}} setTitle={() => 'g'}/>
+        <Field field={{ id: 'title', name: '', count: 0 }} setTitle={() => 'g'} />
       </Provider>
-    </BrowserRouter>
+    </BrowserRouter>,
   ).toJSON();
   expect(fie).toMatchSnapshot();
 });

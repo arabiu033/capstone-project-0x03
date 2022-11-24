@@ -9,9 +9,9 @@ test('renders correctly Header component', () => {
   const home = renderer.create(
     <BrowserRouter>
       <Provider store={store}>
-        <Homepage setTitle={() => 'func'}/>
+        <Homepage setTitle={() => 'func'} />
       </Provider>
-    </BrowserRouter>
+    </BrowserRouter>,
   ).toJSON();
   expect(home).toMatchSnapshot();
 });

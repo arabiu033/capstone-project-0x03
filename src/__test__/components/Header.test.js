@@ -10,9 +10,9 @@ test('renders correctly Form component', () => {
   const header = renderer.create(
     <BrowserRouter>
       <Provider store={store}>
-        <Header title={[]}/>
+        <Header title={[]} />
       </Provider>
-    </BrowserRouter>
+    </BrowserRouter>,
   ).toJSON();
   expect(header).toMatchSnapshot();
 });
