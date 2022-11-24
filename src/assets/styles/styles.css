@@ -1,6 +1,291 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+}
+
+body {
+  background-color: rgb(67, 105, 178);
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+}
+
+.spinner {
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0.7rem;
+}
+
+.header-container ul {
+  display: flex;
+  gap: 25px;
+}
+
+.header-title {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.header-icons {
+  width: 18px;
+  height: 18px;
+}
+
+.header-home {
+  font-weight: 700;
+  color: #fff;
+}
+
+.dhead {
+  font-size: 1.1rem;
+  letter-spacing: 1.4px;
+}
+
+main {
+  background-color: rgb(91, 140, 232);
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.nobel-image {
+  height: 150px;
+}
+
+.stats {
+  font-size: 0.8rem;
+  padding: 0.2rem 1rem;
+}
+
+.categories {
+  background-color: rgb(53, 84, 139);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  gap: 0.6rem;
+  padding: 0.5rem;
+}
+
+.more-info > * {
+  color: inherit;
+}
+
+.categories > *:nth-child(3n) {
+  background-color: rgb(63, 98, 164);
+}
+
+.categories > *:nth-child(2) {
+  background-color: rgb(63, 98, 164);
+}
+
+.categories > *:nth-child(4n - 3) {
+  background-color: rgb(69, 107, 178);
+}
+
+.categories > *:nth-child(4) {
+  background-color: rgb(69, 107, 178);
+}
+
+.field {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.field-arrow {
+  width: 24px;
+  align-self: flex-end;
+  height: 24px;
+}
+
+.field-image {
+  width: 80px;
+  height: 80px;
+  align-self: center;
+}
+
+.field-detail {
+  align-self: flex-end;
+  text-align: right;
+  color: #fff;
+  padding: 5px 0;
+}
+
+.category-icon {
+  position: absolute;
+  top: -1.5rem;
+}
+
+.category-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.category-date {
+  display: flex;
+  align-items: baseline;
+  grid-gap: 1rem;
+  gap: 0.7rem;
+}
+
+.divider {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.laureates {
+  padding: 2rem 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgb(53, 84, 139);
+  gap: 2rem;
+}
+
+.laureates > *:nth-child(odd) {
+  background-color: rgb(63, 98, 164);
+}
+
+.laureates > *:nth-child(even) {
+  background-color: rgb(67, 105, 178);
+  border: 3px solid rgb(63, 98, 164);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.category-name {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+.more-info {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.motivation {
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-align: left;
+}
+
+.more-info button {
+  border: none;
+  background-color: transparent;
+}
+
+.wiki {
+  cursor: pointer;
+  color: navy;
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding: 1.4rem 10rem;
+  }
+
+  .header-container ul {
+    gap: 4rem;
+  }
+
+  .header-home {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 1.4rem;
+    gap: 6rem;
+  }
+
+  main h3 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  main p {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  .nobel-image {
+    height: 350px;
+  }
+
+  .stats {
+    font-size: 1.2rem;
+    padding: 1rem 4rem;
+    text-align: center;
+  }
+
+  .categories {
+    background-color: inherit;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 0.5rem 0.5rem 3rem 0.5rem;
+  }
+
+  .categories > *:nth-child(odd) {
+    background-color: rgb(63, 98, 164);
+  }
+
+  .categories > *:nth-child(even) {
+    background-color: rgb(53, 84, 139);
+  }
+
+  .field {
+    padding: 0.4rem;
+    gap: 0.2rem;
+  }
+
+  .field-image {
+    width: 140px;
+    height: 140px;
+    align-self: center;
+  }
+
+  .field-detail {
+    padding-right: 1rem;
+  }
+
+  .laureates {
+    padding: 2rem 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: inherit;
+    gap: 3rem;
+    width: 90%;
+    margin: 0 auto;
+  }
 }
