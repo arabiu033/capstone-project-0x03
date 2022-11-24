@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly Header component 1`] = `
+<a
+  href="/details"
+  onClick={[Function]}
+>
+  <article
+    className="field"
+    type="button"
+  >
+    <img
+      alt="Field"
+      className="field-arrow"
+      src="arrow.png"
+    />
+    <img
+      alt="Icon"
+      className="field-image"
+    />
+    <div
+      className="field-detail"
+    >
+      <h3
+        className="field-name"
+      />
+      <h3
+        className="field-count"
+      >
+        0
+      </h3>
+    </div>
+  </article>
+</a>
+`;

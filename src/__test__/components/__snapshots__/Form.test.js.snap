@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly Form component 1`] = `
+<form
+  name="filte"
+  onSubmit={[Function]}
+>
+  <label
+    htmlFor="year"
+  >
+    <span>
+      Category 
+    </span>
+    <select
+      id="category"
+      name="id"
+      onChange={[Function]}
+    >
+      <option
+        value="phy"
+      >
+        Physics
+      </option>
+      <option
+        defaultValue="che"
+        value="che"
+      >
+        Chemistry
+      </option>
+      <option
+        value="eco"
+      >
+        Economics
+      </option>
+      <option
+        value="med"
+      >
+        Medicine
+      </option>
+      <option
+        value="Pea"
+      >
+        Peace
+      </option>
+      <option
+        value="lit"
+      >
+        Literature
+      </option>
+    </select>
+  </label>
+  <label
+    htmlFor="year"
+  >
+    <span>
+      Year From (min 1901) 
+    </span>
+    <input
+      id=""
+      name="from"
+      onChange={[Function]}
+      type="text"
+      value={1901}
+    />
+  </label>
+  <label
+    htmlFor="year"
+  >
+    <span>
+      Year To (max 2022) 
+    </span>
+    <input
+      id=""
+      name="to"
+      onChange={[Function]}
+      type="text"
+      value={1951}
+    />
+  </label>
+  <button
+    type="submit"
+  >
+    Filtered
+  </button>
+</form>
+`;
