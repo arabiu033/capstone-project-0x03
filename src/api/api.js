@@ -6,7 +6,10 @@ const API = axios.create({ baseURL: 'https://api.nobelprize.org/2.1/' });
 export const getField = (field) => API.get(`/nobelPrizes?nobelPrizeCategory=${field}`);
 
 // Return the api of a particular category
-export const getLaureates = (id, count) => API.get(`laureates?limit=${count}&nobelPrizeCategory=${id}`);
+export const getLaureates = (
+  id, count, to, from,
+) => API.get(`
+laureates?limit=${count}&nobelPrizeYear=${from}&yearTo=${to}&nobelPrizeCategory=${id}`);
 
 // Formualate the categories data
 const getCategories = async () => {

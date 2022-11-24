@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getLaureates } from '../../api/api';
 
 export const fetchLaureates = createAsyncThunk('capstone/fetchLaureates', async (data) => {
-  const res = await getLaureates(data.id, data.count);
+  const res = await getLaureates(data.id, data.count, data.from, data.to);
   return res.data;
 });
 

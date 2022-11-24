@@ -3,19 +3,23 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../components/Spinner';
 import { fetchNobel } from '../redux/space/nobelSlice';
+import Details from './Details';
 import Field from '../components/Field';
 import nobel from '../assets/images/nobel.png';
+import Form from '../components/Form';
 
 let fetch = true;
 const Homepage = (props) => {
   const dispatch = useDispatch();
   const { setTitle } = props;
+
   useEffect(() => {
     if (fetch) {
       dispatch(fetchNobel());
       fetch = false;
     }
   });
+
   const { categories, loading } = useSelector((state) => ({ ...state.nobel }));
   if (loading === 'Loading Api') return (<Spinner />);
   const total = categories.reduce((t, n) => t + n.count, 0);
@@ -38,6 +42,8 @@ const Homepage = (props) => {
       <ul className="categories">
         {categories.map((field) => <Field field={field} key={field.id} setTitle={setTitle} />)}
       </ul>
+      <Form />
+      <Details />
     </>
   );
 };
