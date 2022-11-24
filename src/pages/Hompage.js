@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Spinner from '../components/Spinner';
 import { fetchNobel } from '../redux/space/nobelSlice';
 import Field from '../components/Field';
+import nobel from '../assets/images/nobel.png';
 
 let fetch = true;
 const Homepage = (props) => {
@@ -14,18 +16,26 @@ const Homepage = (props) => {
       fetch = false;
     }
   });
-  const { categories } = useSelector((state) => ({ ...state.nobel }));
+  const { categories, loading } = useSelector((state) => ({ ...state.nobel }));
+  if (loading === 'Loading Api') return (<Spinner />);
+  const total = categories.reduce((t, n) => t + n.count, 0);
   return (
     <>
       <main>
-        <div />
+        <div>
+          <img src={nobel} alt="nobel" className="nobel-image" />
+        </div>
         <div>
           <h3>Nobel Prize</h3>
-          <p>Laurettes</p>
+          <p>
+            {total}
+            {' '}
+            Laureates
+          </p>
         </div>
       </main>
-      <h5>STATS BY FIELDS</h5>
-      <ul>
+      <h5 className="dhead stats">STATS BY FIELDS</h5>
+      <ul className="categories">
         {categories.map((field) => <Field field={field} key={field.id} setTitle={setTitle} />)}
       </ul>
     </>

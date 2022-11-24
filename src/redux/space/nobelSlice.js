@@ -6,7 +6,7 @@ export const fetchNobel = createAsyncThunk('capstone/fetchNobel', async () => ge
 const nobelSlice = createSlice({
   name: 'nobelCategories',
   initialState: {
-    loading: 'init',
+    loading: 'Loading Api',
     categories: [],
     id: '',
     count: 0,
