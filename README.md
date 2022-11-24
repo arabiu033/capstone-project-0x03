@@ -29,7 +29,7 @@ To get the content of this project locally you need to run the following command
 ### Setup
 1. Download the **Zip** file or clone the repo with:
 ```bash
-git clone https://github.com/arabiu033/maths.git
+https://github.com/arabiu033/capstone-project-0x03
 ```
 3. To access cloned directory run:
 ```bash
